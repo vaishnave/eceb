@@ -1,21 +1,17 @@
-import turtle
-def tree(branchLen,t):
-if branchLen > 5:
-t.forward(branchLen)
-t.right(20)
-tree(branchLen-15,t)
-t.left(40)
-tree(branchLen-15,t)
-t.right(20)
-t.backward(branchLen)
-def main():
-t = turtle.Turtle()
-myWin = turtle.Screen()
-t.left(90)
-t.up()
-t.backward(100)
-t.down()
-t.color("green")
-tree(75,t)
-myWin.exitonclick()
-main()
+#include<stdio.h>
+void move(int,int,int,int);
+void main()
+{
+int disks=3;
+printf("Follow these moves:\n");
+move(disks,1,3,2);
+}
+void move(int count,int start,int finish,int temp)
+{
+if(count>0)
+{
+move(count-1,start,temp,finish);
+printf("Move disk %d from to %d\n ", count,start,finish);
+move(count-1,temp,finish,start);
+}
+}
