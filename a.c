@@ -14,7 +14,7 @@ for(i=0; i<size; i++)
 {
 for(j=i+1; j<size; j++)
 {
-if(arr[j] < arr[i])
+if(arr[j] > arr[i])
 {
 temp = arr[i];
 arr[i] = arr[j];
@@ -22,10 +22,10 @@ arr[j] = temp;
 }
 }
 }
-printf("\nElements of array in sorted ascending order: ");
+printf("\nElements of array in sorted descending order: ");
 for(i=0; i<size; i++)
 {
-printf("%d\t", arr[i]);
+printf("%d", arr[i]);
 }
 return 0;
 } 
